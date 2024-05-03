@@ -1,0 +1,19 @@
+<h1>List of characters</h1>
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Actor</th>
+    <th>Movie</th>
+    <th></th>
+  </tr>
+  <% Character.all.each do |a_character| %>
+    <tr>
+      <td><%= a_character.id %></td>
+      <td><%= a_character.name %></td>
+      <td><%= Actor.find(a_character.actor_id).name %></td>
+      <td><%= Movie.find(a_character.movie_id).title %></td>
+      <td><a href="/characters/<%= a_character.id %>">Show details</a></td>
+    </tr>
+  <% end %>
+</table>

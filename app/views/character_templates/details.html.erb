@@ -1,0 +1,11 @@
+<h1>Character #<%= @the_character.id %> details</h1>
+<dl>
+  <dt>Name</dt>
+  <dd><%= @the_character.name %></dd>
+
+  <dt>Actor</dt>
+  <dd><%= Actor.find(@the_character.actor_id).name %></dd>
+
+  <dt>Movie</dt>
+  <dd><%= Movie.find(@the_character.movie_id).title %></dd>
+</dl>

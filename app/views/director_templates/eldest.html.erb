@@ -1,0 +1,5 @@
+<!-- app/views/director_templates/eldest.html.erb -->
+<h1>Eldest Director</h1>
+<p>The eldest director in our dataset right now is <a href="/directors/<%=@director.id%>"><%=@director.name%></a>, born on <%=@director.dob.strftime("%B %e, %Y")%></p>
+
+<p>(<a href="http://strftime.net/" target="_blank">http://strftime.net/</a> is handy for putting together the formatting strings for the <code>.strftime</code> method.)</p>
